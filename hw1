@@ -1,0 +1,73 @@
+def create_and_verify_password():
+    password = input("Create a password (6-14 characters long): ")
+    if len(password) <=6 and len(password >= 14):
+        print("Password should be between 6-14 characters long. Please try again. ")
+        return None
+
+    verify_password = input("Verify your password: ")
+    if password == verify_password:
+        print("Password successfully set.")
+        return password
+    else:
+        print("Passwords do not match. Please try again. ")
+        return None
+
+new_password = create_and_verify_password()
+
+if new_password is not None:
+    print(f"Password confirmed. ")
+else:
+    print("Password not set. Please try again.")
+
+print("Items available for purchase today:")
+
+def print_list(items):
+    for item in items:
+        print(item)
+
+#item_list = ["Apple: $1.50", "Banana: $0.57", "T-shirt: $4.99"]
+
+print_list(item_list)
+
+# Define a list of items
+items = ["Apple: $1.50", "Banana: $0.57", "T-shirt: $4.99"]
+
+
+
+
+
+
+
+
+
+
+# Calculate the total price
+total_price = 0
+
+if quantity1 > 0:
+    total_price += quantity1 * price
+
+if quantity2 > 0:
+    total_price += quantity2 * price
+
+
+
+
+#else:
+  #print("Item is not recognized. Please try again.")
+
+print("Items you have in cart:", item_quantity, "piece(s) of", item)
+print(f"The total price is: ${total_price}")
+
+#item1 = input("Enter item from list you would like to purchase: ")
+#item2 = input("Enter item from list you would like to puchase: ")
+
+checkout = input("Do you want to pay and exit? (yes/no): ")
+if checkout == 'yes':
+    print("Payment successful! Thank you for shopping with us")
+elif checkout == 'no':
+  print("The payment was not successful. Items remain in your cart")
+else:
+    print("Invalid input. Please try again")
+
+exit()
